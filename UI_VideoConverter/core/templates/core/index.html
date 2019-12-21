@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistemas Distribuidos</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="{% static 'core/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'core/css/freelancer.min.css' %}" rel="stylesheet">
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">SD_Converter</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Image Converter</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Video Converter</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Document Converter</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">
+        <img class="img-fluid mb-5 d-block mx-auto" src="{% static 'core/img/profile.png' %}" alt="">
+        <h1 class="text-uppercase mb-0">Converter</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">Program Converter - Convertidor de Formatos</h2>
+      </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Image Converter</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form name="sentMessage" id="dataEntryForm" novalidate="novalidate">
+              <select class="browser-default custom-select">
+                <option selected>Elija un formato</option>
+                <option value="1">BMP</option>
+                <option value="2">EPS</option>
+                <option value="3">GIF</option>
+                <option value="4">ICO</option>
+                <option value="5">JPG</option>
+                <option value="6">PNG</option>
+                <option value="7">SVG</option>
+                <option value="8">TGA</option>
+                <option value="9">WBMP</option>
+                <option value="10">WebP</option>
+              </select>
+              <br><br> 
+              <p id="GFG_UP" style="font-size: 15px; font-weight: bold;"></p> 
+              <input type="file" id="File" /> 
+              <br><br> 
+              <p id="GFG_DOWN" style="color:green; font-size: 20px; font-weight: bold;"></p>
+
+              <br>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary btn-xl" id="sendMessageButton">Convertir</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Video Converter</h2>
+        <hr class="star-light mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form name="sentMessage" id="dataEntryForm" novalidate="novalidate">
+              <select class="browser-default custom-select">
+                <option selected>Elija un formato</option>
+                <option value="1">3G2</option>
+                <option value="2">3GP</option>
+                <option value="3">AVI</option>
+                <option value="4">FLV</option>
+                <option value="5">MKV</option>
+                <option value="6">MOV</option>
+                <option value="7">MP4</option>
+                <option value="8">MPEG-1</option>
+                <option value="9">MPEG-2</option>
+                <option value="10">OGV</option>
+                <option value="10">WebM</option>
+                <option value="11">WMV</option>
+              </select>
+              <br><br> 
+              <p id="GFG_UP2" style="font-size: 15px; font-weight: bold;"></p> 
+              <input type="file" id="File2" /> 
+              <br><br> 
+              <p id="GFG_DOWN2" style="color:green; font-size: 20px; font-weight: bold;"></p>
+
+              <br>
+              <div class="form-group">
+                <button type="button" class="btn btn-white btn-xl" id="sendMessageButton">Convertir</button>
+              </div>
+            </form>
+          </div>
+        
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Document Converter</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <form name="sentMessage" id="dataEntryForm" novalidate="novalidate">
+              <select class="browser-default custom-select">
+                <option selected>Elija un formato</option>
+                <option value="1">DOC</option>
+                <option value="2">DOCX</option>
+                <option value="3">HTML</option>
+                <option value="4">ODT</option>
+                <option value="5">PDF</option>
+                <option value="6">PPT</option>
+                <option value="7">PPTX</option>
+                <option value="8">RTF</option>
+                <option value="9">TXT</option>
+                <option value="10">XLSX</option>
+              </select>
+              <br><br> 
+              <p id="GFG_UP3" style="font-size: 15px; font-weight: bold;"></p> 
+              <input type="file" id="File3" /> 
+              <br><br> 
+              <p id="GFG_DOWN3" style="color:green; font-size: 20px; font-weight: bold;"></p>
+
+              <br>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary btn-xl" id="sendMessageButton">Convertir</button>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">University</h4>
+            <p class="lead mb-0"></p>
+            <img class="img-fluid rounded" src="{% static 'core/img/espol.jpg' %}" alt="">
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Around the Web</h4>
+            <h5>Bryan Paucar - Ricardo Serrano - Alex Macas</h5>
+            
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">Sistemas Distribuidos</h4>
+            <p class="lead mb-0">
+              <a href="http://startbootstrap.com"></a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright py-4 text-center text-white">
+      <div class="container">
+        <small>Copyright &copy; 2019</small>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'core/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'core/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{% static 'core/js/jqBootstrapValidation.js' %}"></script>
+    
+    <script src="{% static 'core/js/funcion1.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'core/js/freelancer.min.js' %}"></script>
+
+  </body>
+
+</html>
+
