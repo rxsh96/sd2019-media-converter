@@ -2,7 +2,7 @@ from converter import Converter
 import sys
 
 def convert_video(video_name, new_format):
-	'''Function that will convert a specific video-format to another format.
+	'''Function that will convert a specific video-format to another 
 		Parameters
         ----------
         video_name : str

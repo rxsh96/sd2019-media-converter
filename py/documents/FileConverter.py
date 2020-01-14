@@ -1,4 +1,4 @@
-import comtypes.client
+'''import comtypes.client
 import os
 
 
@@ -12,3 +12,8 @@ def convertDOCtoPdf(nombre):
     word.Quit() 
 
 convertDOCtoPdf("../prueba/LabGoogleCloudPubSub.docx")
+'''
+
+import pypandoc
+
+output = pypandoc.convert_file('somefile.txt', 'rst', format='md')
