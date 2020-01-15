@@ -1,17 +1,19 @@
-FROM python:3.6
+FROM python:3
 
-# The enviroment variable ensures that the python output is set straight
-# to the terminal with out buffering it first
-ENV PYTHONUNBUFFERED 1
-
-# create root directory for our project in the container
-RUN mkdir /frontend
+MAINTAINER Ricardo Serrano <rxsh964@gmail.com>
 
 # set a directory for the app
-WORKDIR /frontend
+RUN mkdir /code
+WORKDIR /code
 
 # copy all the files to the container
 COPY . .
 
 # install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+
+# tell the port number the container should expose
+EXPOSE 8000
+
+# run the command
+CMD ["python", "./manage.py", "runserver", "0.0.0.0:8000"]

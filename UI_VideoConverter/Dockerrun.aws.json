@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "rxsh96/frontendmediaconverter",
+    "Name": "rxsh96/mediaconverterweb",
     "Update": "true"
   },
   "Ports": [
