@@ -26,13 +26,13 @@ SECRET_KEY = '2jh1cwnigbi#)ehlrybwa#qsxebh^ew9%23tp1^mv*xco#pca^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '192.168.99.100']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    #'django.contrib.admin', SI LO DESCOMENTAMOS, LOS ARCHIVOS ESTATICOS DEL ADMIN DE DJANGO TAMBIEN SE SUBEN AL BUCKET DE S3 
+    'django.contrib.admin', #SI LO DESCOMENTAMOS, LOS ARCHIVOS ESTATICOS DEL ADMIN DE DJANGO TAMBIEN SE SUBEN AL BUCKET DE S3 
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -102,6 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+'''
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
@@ -118,6 +119,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+'''
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
