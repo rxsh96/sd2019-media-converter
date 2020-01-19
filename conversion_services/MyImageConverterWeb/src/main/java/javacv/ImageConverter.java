@@ -20,6 +20,23 @@ public class ImageConverter {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 	}	
 	
+	/**
+	 * Method that converts an image to PNG format
+	 * @param multipartFile from post request data
+	 * @return the new converted image path
+	 */
+	public String pngConversion(MultipartFile multipartFile) {
+		File myFile = FileConverter.convertMultiPartToFile(multipartFile);
+		Mat image = Imgcodecs.imread(myFile.getPath());
+		String convertedFilePath = myFile.getPath()+".png";
+		FileConverter.deleteFile(myFile);
+		if(Imgcodecs.imwrite(convertedFilePath, image)) {
+			return convertedFilePath;
+		}
+		return null;
+	}
+	
+	
 	public BufferedImage convertToPNG(MultipartFile file) {
 		File myFile = FileConverter.convertMultiPartToFile(file);
 		Mat image = Imgcodecs.imread(myFile.getPath());
