@@ -24,7 +24,7 @@ import org.springframework.core.io.Resource;
 
 
 @RestController
-public class ImageEndPoint  {
+public class ImageContoller  {
 		
 	
 	/**
