@@ -62,7 +62,7 @@
         <h2 class="font-weight-light mb-0">Program Converter - Convertidor de Formatos</h2>
       </div>
     </header>
-
+    <div id="appImage">
     <!-- Portfolio Grid Section -->
     <section class="portfolio" id="portfolio">
       <div class="container">
@@ -70,7 +70,7 @@
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <form name="sentMessage" id="dataEntryForm" novalidate="novalidate">
+            <form method="POST" name="sentMessage" id="imageConverter" enctype="multipart/form-data" novalidate="novalidate">
               <select class="browser-default custom-select">
                 <option selected>Elija un formato</option>
                 <option value="1">BMP</option>
@@ -85,14 +85,16 @@
                 <option value="10">WebP</option>
               </select>
               <br><br> 
-              <p id="GFG_UP" style="font-size: 15px; font-weight: bold;"></p> 
-              <input type="file" id="File" /> 
+              <!--<p id="GFG_UP" style="font-size: 15px; font-weight: bold;"></p> 
+              <input type="file" id="File">
               <br><br> 
-              <p id="GFG_DOWN" style="color:green; font-size: 20px; font-weight: bold;"></p>
-
+              <p id="GFG_DOWN" style="color:green; font-size: 20px; font-weight: bold;"></p>-->
+              {% csrf_token %}
+              {{form.as_p}}
+              
               <br>
               <div class="form-group">
-                <button type="button" class="btn btn-primary btn-xl" id="sendMessageButton">Convertir</button>
+                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Convertir</button>
               </div>
             </form>
           </div>
@@ -100,9 +102,9 @@
         </div>
       </div>
     </section>
-
+    </div>
     <!-- Design Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <!--<section class="bg-primary text-white mb-0" id="about">
       <div class="container">
         <h2 class="text-center text-uppercase text-white">Video Converter</h2>
         <hr class="star-light mb-5">
@@ -140,7 +142,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    Contact Section 
     <section id="contact">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Document Converter</h2>
@@ -174,7 +176,7 @@
             </form>
           </div>
       </div>
-    </section>
+    </section>-->
 
 
     <!-- Footer -->
@@ -230,7 +232,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="{% static 'core/js/freelancer.min.js' %}"></script>
-
+    <!-- Plugin Vue.js -->
+    <!--<script src="{% static 'core/js/vue.min.js' %}"></script>
+    <script src="{% static 'core/js/vue-resource.min.js' %}"></script>
+    <script src="{% static 'core/js/vueEjecucion.js' %}"></script>-->
   </body>
 
 </html>
