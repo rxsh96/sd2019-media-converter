@@ -19,10 +19,10 @@ def convertirImagen(request):
         if form.is_valid():
             img_publicacion=request.FILES['archivo']
             print(img_publicacion)
-            url="http://08786c79.ngrok.io/pngimage1"
+            url="http://d1bae711.ngrok.io/pngimage"
             payload={}
             files=[('image',img_publicacion)]
-            headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+            headers = {}
             response = requests.request("POST", url, headers=headers, data = payload, files = files)
             print(response.text.encode('utf8'))
     else:
