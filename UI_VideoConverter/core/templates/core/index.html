@@ -73,16 +73,8 @@
             <form name="sentMessage" method="POST" enctype="multipart/form-data" id="imageConverter">
               <select class="browser-default custom-select">
                 <option selected>Elija un formato</option>
-                <option value="1">BMP</option>
-                <option value="2">EPS</option>
-                <option value="3">GIF</option>
-                <option value="4">ICO</option>
-                <option value="5">JPG</option>
-                <option value="6">PNG</option>
-                <option value="7">SVG</option>
-                <option value="8">TGA</option>
-                <option value="9">WBMP</option>
-                <option value="10">WebP</option>
+                <option value="1">PNG</option>
+                <option value="2">JPG</option>
               </select>
               <br><br> 
               <!--<p id="GFG_UP" style="font-size: 15px; font-weight: bold;"></p> 
@@ -141,7 +133,8 @@
         
       </div>
     </section>
-
+-->
+<!--
     Contact Section 
     <section id="contact">
       <div class="container">
@@ -149,7 +142,7 @@
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <form name="sentMessage" id="dataEntryForm" novalidate="novalidate">
+            <form name="sentMessage" method="POST" enctype="multipart/form-data" id="documentConverter">
               <select class="browser-default custom-select">
                 <option selected>Elija un formato</option>
                 <option value="1">DOC</option>
@@ -164,10 +157,13 @@
                 <option value="10">XLSX</option>
               </select>
               <br><br> 
-              <p id="GFG_UP3" style="font-size: 15px; font-weight: bold;"></p> 
+              
+              <!--<p id="GFG_UP3" style="font-size: 15px; font-weight: bold;"></p> 
               <input type="file" id="File3" /> 
               <br><br> 
               <p id="GFG_DOWN3" style="color:green; font-size: 20px; font-weight: bold;"></p>
+              {% csrf_token %}
+              {{form.as_p}}
 
               <br>
               <div class="form-group">
@@ -176,9 +172,9 @@
             </form>
           </div>
       </div>
-    </section>-->
+    </section>
 
-
+-->
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">

@@ -6,25 +6,29 @@ from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from .forms import *
+from django.core.files.images import ImageFile
 import requests
+from django.http import HttpResponse
+
 
 '''class HomePageView(TemplateView):
     template_name = "core/index.html"
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name,{'title':"Mi web admin"})'''
+
 def convertirImagen(request):
     if request.method=="POST":
-        form=ConvertirImagenForm(request.POST or None,request.FILES or None)
+        form = ConvertirImagenForm(request.POST, request.FILES)
         if form.is_valid():
-            img_publicacion=request.FILES['archivo']
-            print(img_publicacion)
-            url="http://d1bae711.ngrok.io/pngimage"
-            payload={}
-            files=[('image',img_publicacion)]
-            headers = {}
-            response = requests.request("POST", url, headers=headers, data = payload, files = files)
-            print(response.text.encode('utf8'))
+            url = "http://1b337416.ngrok.io/pngimage"
+            files = [
+              ('image', request.FILES['archivo'].read())
+            ]
+            response = requests.request("POST", url, files = files)
+            resp = HttpResponse(response.content, content_type="image/jpeg")
+            resp['Content-Disposition'] = 'attachment; filename=%s.png' % request.FILES['archivo']
+            return resp
     else:
         form=ConvertirImagenForm()
     return render(request,'core/index.html',{'form':form})
